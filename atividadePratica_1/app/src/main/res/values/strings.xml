@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">atividadePratica_1</string>
+    <string name="jokenp_gabrielle_fonseca">Jokenpô - Gabrielle Fonseca</string>
+    <string name="nova_partida">Nova Partida</string>
+    <string name="papel">Papel</string>
+    <string name="pedra">Pedra</string>
+    <string name="tesoura">Tesoura</string>
+    <string name="escolha_cpu">Escolha CPU:</string>
+    <string name="sua_escolha">Sua Escolha:</string>
+    <string name="voc_x_cpu_n0_0">Você X CPU\n0 : 0</string>
+
+    <!-- Adicionando placeholders para texto dinâmico -->
+    <string name="player_choice">Sua Escolha: %1$s</string>
+    <string name="cpu_choice">Escolha CPU: %1$s</string>
+    <string name="score">Você X CPU\n%1$d : %2$d</string>
 </resources>

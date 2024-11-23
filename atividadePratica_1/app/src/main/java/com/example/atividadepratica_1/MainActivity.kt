@@ -5,7 +5,6 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.atividadepratica_1.R
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -33,8 +32,10 @@ class MainActivity : AppCompatActivity() {
         // Função para determinar o vencedor
         fun playRound(playerChoice: String) {
             val cpuChoice = options[Random.nextInt(options.size)]
-            tvResult.text = "Sua Escolha: $playerChoice"
-            tvCPUChoice.text = "Escolha CPU: $cpuChoice"
+
+            // Usando as strings de recursos com placeholders
+            tvResult.text = getString(R.string.player_choice, playerChoice)
+            tvCPUChoice.text = getString(R.string.cpu_choice, cpuChoice)
 
             // Lógica para determinar quem ganhou
             when {
@@ -48,11 +49,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            // Atualizar a pontuação
-            tvScore.text = "Você X CPU\n$playerScore : $cpuScore"
+            // Atualizar a pontuação usando recurso de string com placeholders
+            tvScore.text = getString(R.string.score, playerScore, cpuScore)
         }
 
-        // Configurando os botões
+        // Configurando os botões para as opções
         btnTesoura.setOnClickListener { playRound("TESOURA") }
         btnPedra.setOnClickListener { playRound("PEDRA") }
         btnPapel.setOnClickListener { playRound("PAPEL") }
@@ -61,9 +62,9 @@ class MainActivity : AppCompatActivity() {
         btnNovaPartida.setOnClickListener {
             playerScore = 0
             cpuScore = 0
-            tvScore.text = "Você X CPU\n0 : 0"
-            tvResult.text = "Sua Escolha: "
-            tvCPUChoice.text = "Escolha CPU: "
+            tvScore.text = getString(R.string.score, playerScore, cpuScore)
+            tvResult.text = getString(R.string.player_choice, "")
+            tvCPUChoice.text = getString(R.string.cpu_choice, "")
         }
     }
 }
