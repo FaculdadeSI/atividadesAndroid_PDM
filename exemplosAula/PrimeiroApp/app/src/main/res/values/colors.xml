@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#f7f6f2</color>
+    <color name="font_color">#c0b9b1</color>
+    <color name="edit_text_color">#ebe6e2</color>
+    <color name="cyan">#51bfa4</color>
+    <color name="marrom_esq">#79714B</color>
+</resources>
