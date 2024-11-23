@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jokenpô - Gabrielle Fonseca"
+        android:text="@string/jokenp_gabrielle_fonseca"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center"
@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/tesoura"
-                android:contentDescription="Tesoura"
+                android:contentDescription="@string/tesoura"
                 android:background="?android:attr/selectableItemBackgroundBorderless" />
         </FrameLayout>
 
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/pedra"
-                android:contentDescription="Pedra"
+                android:contentDescription="@string/pedra"
                 android:background="?android:attr/selectableItemBackgroundBorderless" />
         </FrameLayout>
 
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/papel"
-                android:contentDescription="Papel"
+                android:contentDescription="@string/papel"
                 android:background="?android:attr/selectableItemBackgroundBorderless" />
         </FrameLayout>
     </LinearLayout>
@@ -86,7 +86,7 @@
             android:id="@+id/tvResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sua Escolha:"
+            android:text="@string/sua_escolha"
             android:textSize="16sp"
             android:paddingBottom="8dp" />
 
@@ -94,7 +94,7 @@
             android:id="@+id/tvCPUChoice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Escolha CPU:"
+            android:text="@string/escolha_cpu"
             android:textSize="16sp"
             android:paddingBottom="8dp" />
     </LinearLayout>
@@ -104,7 +104,7 @@
         android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Você X CPU\n0 : 0"
+        android:text="@string/voc_x_cpu_n0_0"
         android:gravity="center"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -115,7 +115,7 @@
         android:id="@+id/btnNovaPartida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nova Partida"
+        android:text="@string/nova_partida"
         android:backgroundTint="@android:color/holo_red_light"
         android:textColor="@android:color/white"
         android:paddingHorizontal="32dp"

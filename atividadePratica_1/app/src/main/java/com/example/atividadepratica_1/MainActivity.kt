@@ -9,7 +9,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    // Variáveis para pontuação
+    // Variáveis para armazenar a pontuação do jogador e da CPU
     private var playerScore = 0
     private var cpuScore = 0
 
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Referências aos elementos do layout
+        // Referências aos elementos do layout através do findViewById
         val btnTesoura: ImageButton = findViewById(R.id.btnTesoura)
         val btnPedra: ImageButton = findViewById(R.id.btnPedra)
         val btnPapel: ImageButton = findViewById(R.id.btnPapel)
@@ -26,43 +26,51 @@ class MainActivity : AppCompatActivity() {
         val tvScore: TextView = findViewById(R.id.tvScore)
         val btnNovaPartida: Button = findViewById(R.id.btnNovaPartida)
 
-        // Lista com as opções possíveis
+        // Lista contendo as opções do jogo: Tesoura, Pedra e Papel
         val options = arrayOf("TESOURA", "PEDRA", "PAPEL")
 
-        // Função para determinar o vencedor
+        // Função para executar uma rodada do jogo, determinando o vencedor
         fun playRound(playerChoice: String) {
+            // A CPU faz uma escolha aleatória
             val cpuChoice = options[Random.nextInt(options.size)]
 
-            // Usando as strings de recursos com placeholders
+            // Exibe a escolha do jogador e da CPU utilizando recursos de string com placeholders
             tvResult.text = getString(R.string.player_choice, playerChoice)
             tvCPUChoice.text = getString(R.string.cpu_choice, cpuChoice)
 
-            // Lógica para determinar quem ganhou
+            // Lógica para determinar o vencedor da rodada
             when {
+                // Condições em que o jogador vence
                 (playerChoice == "TESOURA" && cpuChoice == "PAPEL") ||
                         (playerChoice == "PEDRA" && cpuChoice == "TESOURA") ||
                         (playerChoice == "PAPEL" && cpuChoice == "PEDRA") -> {
-                    playerScore++
+                    playerScore++  // Incrementa a pontuação do jogador
                 }
+                // Condição em que a CPU vence
                 playerChoice != cpuChoice -> {
-                    cpuScore++
+                    cpuScore++  // Incrementa a pontuação da CPU
                 }
             }
 
-            // Atualizar a pontuação usando recurso de string com placeholders
+            // Atualiza a exibição da pontuação no layout, utilizando a string com placeholders
             tvScore.text = getString(R.string.score, playerScore, cpuScore)
         }
 
-        // Configurando os botões para as opções
+        // Configuração dos listeners de clique para os botões de escolha do jogador
         btnTesoura.setOnClickListener { playRound("TESOURA") }
         btnPedra.setOnClickListener { playRound("PEDRA") }
         btnPapel.setOnClickListener { playRound("PAPEL") }
 
-        // Botão para reiniciar o jogo
+        // Configuração do botão "Nova Partida" para reiniciar o jogo
         btnNovaPartida.setOnClickListener {
+            // Reinicia as pontuações do jogador e da CPU
             playerScore = 0
             cpuScore = 0
+
+            // Atualiza a exibição da pontuação
             tvScore.text = getString(R.string.score, playerScore, cpuScore)
+
+            // Limpa as escolhas anteriores
             tvResult.text = getString(R.string.player_choice, "")
             tvCPUChoice.text = getString(R.string.cpu_choice, "")
         }
