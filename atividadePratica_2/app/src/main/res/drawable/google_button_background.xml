@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"> <!-- Define que o formato da forma será um retângulo -->
+
+    <corners android:radius="12dp" /> <!-- Define os cantos arredondados com raio de 12dp -->
+
+    <solid android:color="@color/googleWhite" /> <!-- Define a cor interna da forma como 'googleWhite' -->
+
+    <!-- Define a borda da forma com 2dp de largura e cor 'colorAccent' -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/colorAccent" />
+</shape>

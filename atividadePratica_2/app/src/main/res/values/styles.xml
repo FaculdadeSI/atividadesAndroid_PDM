@@ -1,0 +1,16 @@
+<resources>
+    <!-- Estilo personalizado para os botões -->
+    <style name="CustomButton" parent="Widget.AppCompat.Button">
+        <!-- Define o fundo do botão usando o atributo do sistema para seleção de itens -->
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+
+        <!-- Define o padding (espaçamento interno) como 0dp para um botão sem espaçamento extra -->
+        <item name="android:padding">0dp</item>
+
+        <!-- Define a altura mínima do botão como 0dp, removendo qualquer altura mínima padrão -->
+        <item name="android:minHeight">0dp</item>
+
+        <!-- Define a largura mínima do botão como 0dp, removendo qualquer largura mínima padrão -->
+        <item name="android:minWidth">0dp</item>
+    </style>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Primeiro item: imagem de fundo -->
+    <item android:drawable="@drawable/background_pattern" />
+
+    <!-- Segundo item: gradiente de transição da imagem para a cor branca -->
+    <item>
+        <shape >
+            <!-- Definição de um gradiente linear -->
+            <gradient
+                android:startColor="@android:color/white"
+                android:endColor="@android:color/white"
+                android:angle="90"
+                android:type="linear"
+                android:useLevel="false"
+            />
+            <!-- Definição do tamanho do gradiente -->
+            <size
+                android:height="200dp" /> <!-- Ajuste a altura do gradiente conforme necessário -->
+        </shape>
+    </item>
+</layer-list>

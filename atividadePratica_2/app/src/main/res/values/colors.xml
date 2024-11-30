@@ -1,0 +1,17 @@
+<resources>
+    <!-- Cores principais do aplicativo -->
+    <color name="colorPrimary">#6200EE</color>  <!-- Cor principal (roxa) -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Cor escura da cor principal (roxo mais escuro) -->
+    <color name="colorAccent">#0ABAB5</color>  <!-- Cor de destaque (verde-azulado) -->
+
+    <!-- Cores específicas para os botões -->
+    <color name="facebookBlue">#4267B2</color> <!-- Cor do botão Facebook (azul) -->
+    <color name="googleWhite">#FFFFFF</color>  <!-- Cor de fundo do botão Google (branco) -->
+    <color name="googleBorder">#DDDDDD</color> <!-- Cor da borda do botão Google (cinza claro) -->
+    <color name="googleText">#333333</color>   <!-- Cor do texto do botão Google (preto suave) -->
+
+    <!-- Outras cores úteis no design -->
+    <color name="white">#FFFFFF</color>        <!-- Cor branca -->
+    <color name="black">#000000</color>        <!-- Cor preta -->
+    <color name="grayLight">#F5F5F5</color>    <!-- Cor cinza claro (para fundos ou separadores) -->
+</resources>

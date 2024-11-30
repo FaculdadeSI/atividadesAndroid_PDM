@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define que a forma será preenchida com um gradiente -->
+
+    <!-- Define a cor inicial do gradiente -->
+    <gradient
+        android:startColor="@android:color/white"
+        android:endColor="@android:color/white"
+        android:angle="90"
+    />
+</shape>

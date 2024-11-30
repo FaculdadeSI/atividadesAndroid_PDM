@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define que a forma será uma figura com bordas arredondadas e preenchimento sólido -->
+
+    <corners android:radius="12dp" /> <!-- Define os cantos arredondados com raio de 12dp -->
+
+    <solid android:color="@color/colorAccent" /> <!-- Define a cor interna da forma como 'colorAccent' -->
+</shape>
